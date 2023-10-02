@@ -1,39 +1,32 @@
-Collision Detection Library
-This Python library provides a simple and efficient way to detect collisions between 2D polygons. It utilizes the Separating Axis Theorem (SAT) for collision detection. The library defines two main classes: Vector and Shape.
+PolygonCollision is a Python module designed for efficient collision detection between 2D polygons. Using the Separating Axis Theorem (SAT), this library enables precise detection of intersections between polygons, making it an essential tool for game developers, simulations, and applications requiring accurate collision detection between shapes.
 
-Classes
-Vector
-A class representing a 2D vector with x and y components.
+Features:
+Polygon Collision Detection: Determine whether two 2D polygons overlap with accurate collision detection algorithms.
+Customizable Shapes: Define custom 2D shapes by specifying their vertices as Vector objects.
+Efficient Algorithm: Implementing the Separating Axis Theorem (SAT) ensures fast and reliable collision detection for complex polygons.
 
-Methods:
-__init__(self, x, y): Initializes a Vector object with the given x and y components.
-Shape
-A class representing a 2D polygon.
-
-Methods:
-__init__(self, vertices): Initializes a Shape object with a list of Vector objects representing its vertices.
-collide(self, other_shape): Checks if the current Shape collides with another Shape object. Returns True if there is a collision, otherwise False.
-Usage
-python
-Copy code
-# Example usage of the Collision Detection Library
-
-from collision_detection import Shape, Vector
-
-# Create shapes
-shape1 = Shape([Vector(0, 0), Vector(50, 0), Vector(50, 50), Vector(0, 50)])
-shape2 = Shape([Vector(25, 25), Vector(30, 25), Vector(30, 30), Vector(25, 30)])
-
-# Check for collision
-if shape1.collide(shape2):
-    print("Shapes collide!")
-else:
-    print("No collision detected.")
-How It Works
+How It Works:
 The library checks for collisions by projecting the shapes onto various axes and checking if the projections overlap. If there is no axis along which the projections of the two shapes do not overlap, they are colliding.
 
-Contributing
-Feel free to contribute by opening issues or pull requests. Bug reports, suggestions, and improvements are welcome!
+Code Examples:
+from PolygonCollision import PolygonCollision
 
-License
+#Create 2 squares
+polygon1=PolygonCollision.Shape(vertices=[(0,0),(0,20),(20,20),(20,0)]) #x:0 y:0, size 20
+polygon2=PolygonCollision.Shape(vertices=[(10,10),(10,30),(30,30),(30,10)]) #x:10 y:10, size 20
+
+#Create circle
+circle=PolygonCollision.Shape(vertices=[(30,30)],radius=10) #x:30 y:30, radius 10
+
+if polygon1.collide(polygon2): #Check if polygon2 is touching polygon1 (True)
+    print("POLYGON COLLISION!!!")
+else:
+    print("no polygon collision")
+
+if polygon1.collide(circle): #Check if circle is touching polygon1 (False)
+    print("CIRCLE COLLISION!!!")
+else:
+    print("no circle collision")
+
+License:
 This Collision Detection Library is licensed under the MIT License - see the LICENSE file for details.
