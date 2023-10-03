@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: PolygonCollision
-Version: 0.1.3
+Version: 0.1.4
 Summary: A simple python collision dectection tool
 Author: made-up
 Project-URL: Homepage, https://github.com/vertmit/PolygonCollision
@@ -22,7 +22,7 @@ How It Works:
 The library checks for collisions by projecting the shapes onto various axes and checking if the projections overlap. If there is no axis along which the projections of the two shapes do not overlap, they are colliding.
 
 Code Examples:
-from PolygonCollision import PolygonCollision
+from PolygonCollision import shape
 
 #Create 2 squares
 polygon1=PolygonCollision.Shape(vertices=[(0,0),(0,20),(20,20),(20,0)]) #x:0 y:0, size 20

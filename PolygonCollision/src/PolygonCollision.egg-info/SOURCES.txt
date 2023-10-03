@@ -1,7 +1,7 @@
 README.md
 pyproject.toml
-src/PolygonCollision/PolygonCollision.py
 src/PolygonCollision/__init__.py
+src/PolygonCollision/shape.py
 src/PolygonCollision.egg-info/PKG-INFO
 src/PolygonCollision.egg-info/SOURCES.txt
 src/PolygonCollision.egg-info/dependency_links.txt
