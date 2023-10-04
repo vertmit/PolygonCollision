@@ -1,3 +1,4 @@
+<img src="logo.png">
 PolygonCollision is a Python module designed for efficient collision detection between 2D polygons. Using the Separating Axis Theorem (SAT), this library enables precise detection of intersections between polygons, making it an essential tool for game developers, simulations, and applications requiring accurate collision detection between shapes.
 
 # Features:
@@ -29,7 +30,7 @@ if polygon1.collide(circle): #Check if circle is touching polygon1 (False)
 else:
     print("no circle collision")
 ```
-### Output
+Output
 ```Output
 POLYGON COLLISION!!!
 no circle collision
