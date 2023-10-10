@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/PolygonCollision/__init__.py
+src/PolygonCollision/shape.py
+src/PolygonCollision/vector.py
+src/PolygonCollision.egg-info/PKG-INFO
+src/PolygonCollision.egg-info/SOURCES.txt
+src/PolygonCollision.egg-info/dependency_links.txt
+src/PolygonCollision.egg-info/top_level.txt
